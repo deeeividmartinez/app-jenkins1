@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Bulid') {
       steps {
-        sh 'docker build --tag APP .'
+        sh 'docker build -t APP .'
       }
     }
     stage('Test') {
