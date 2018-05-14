@@ -1,14 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('Inicio') {
+    stage('Bulid') {
       steps {
-        echo 'Hola desde stage inicio'
+        sh 'docker bulid -t app .'
       }
     }
-    stage('Test 2') {
+    stage('Test') {
       steps {
-        echo 'Hola desde Stage 2'
+        echo 'TEST'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'DEPLOY'
       }
     }
   }
