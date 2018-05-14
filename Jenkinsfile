@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Bulid') {
       steps {
-        sh 'docker run hello-world'
+        sh 'docker build -t app .'
       }
     }
     stage('Test') {
