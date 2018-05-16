@@ -17,7 +17,8 @@ pipeline {
     stage('Push Registry') {
       steps {
         echo 'DEPLOY'
-        withDockerRegistry([credentialsId: 'DockerHub', url: "https://index.docker.io/v1/"]) {
+        withDockerRegistry([credentialsId: 'DockerHub', url: 'https://index.docker.io/v1/']) {
+          echo 'entra'
           sh 'docker tag app:test deeeividmartinez/app:stable'
           sh 'docker push deeeividmartinez/app:stable'
         }
