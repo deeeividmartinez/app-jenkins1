@@ -13,10 +13,6 @@ pipeline {
         sh 'nc -vz localhost 80'
         sh 'docker stop app'
       }
-      post{
-        always
-
-      }
     }
     stage('Push Registry') {
       steps {
